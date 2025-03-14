@@ -6,8 +6,9 @@ export const loginUsers = async (req, res) => {
 
   try {
     const user = await Users.findOne({ email });
-    if ((user && user.password === password)) {
-      const token = jwt.sign({ email: user.email }, "Taaldaa");
+    if (user && user.password === password) {
+      const token = jwt.sign({ email: user.email, id: user._id }, "Taaldaa");
+
       res.json({ message: "login success", token: token });
     } else {
       res.json({ message: "login failed" });

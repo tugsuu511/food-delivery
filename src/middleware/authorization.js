@@ -7,6 +7,7 @@ export const authorizationMiddleware = (req, res, next) => {
   const token = authorization.split(" ")[1];
 
   try {
+    // decode hiisnee req.user gedeg damjuulna
     jwt.verify(token, "Taaldaa");
     next();
   } catch (err) {

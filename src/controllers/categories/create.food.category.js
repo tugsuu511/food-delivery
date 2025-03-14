@@ -1,11 +1,11 @@
 import { foodCategories } from "../../models/foodCategory.schema.js";
 
-export const creadeFoodCategory = async (req, res) => {
+export const createFoodCategory = async (req, res) => {
   try {
     const categoryName = req.body;
-    const newCategory = await foodCategories.create({
+    const newCategory = await foodCategories.create(
       categoryName
-    });
+    );
     res.json({ message: "Category created", category: newCategory });
   } catch (error) {
     console.log(error);

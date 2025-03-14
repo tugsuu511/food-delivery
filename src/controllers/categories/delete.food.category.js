@@ -1,4 +1,3 @@
-
 import { foodCategories } from "../../models/foodCategory.schema.js";
 
 export const deleteFoodCategory = async (req, res) => {
@@ -8,7 +7,7 @@ export const deleteFoodCategory = async (req, res) => {
     if (!deletedCategory) {
       return res.status(404).json({ message: "Category not found" });
     } else {
-      res.status(200).json({ message: "Category  deleted" });
+      res.status(200).json({ message: "Category deleted" });
     }
   } catch (err) {
     console.log(err);
