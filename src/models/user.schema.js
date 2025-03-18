@@ -11,6 +11,7 @@ const userSchema = new Schema({
   address: { type: String },
   // role: { type: UserRole },
   // orderedFoods: { type: ObjectId },
+  
   isVerified: { type: Boolean },
   createdAt: { type: Date },
   updatedAt: { type: Date },
