@@ -5,7 +5,7 @@ import { createFoodCategory } from "../controllers/categories/create.food.catego
 import { getAllCategories } from "../controllers/categories/get.food.category.js";
 import { deleteFoodCategory } from "../controllers/categories/delete.food.category.js";
 import { deleteFood } from "../controllers/admins/delete.food.js";
-import { UpdateFoodCategory } from "../controllers/categories/update.food.category.js";
+import { UpdateFoodCategory } from "../controllers/categories/update.food.js";
 import { UpdateFood } from "../controllers/admins/update.food.js";
 
 export const foodsRouter = express.Router();
