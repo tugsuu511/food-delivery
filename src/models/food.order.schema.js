@@ -12,7 +12,11 @@ const foodOrderSchema = new Schema(
     foodOrderItems: [
       { type: Schema.Types.ObjectId, ref: "Foods", quantity: Number },
     ],
-    // status: { type: string, enum: ["PENDING", "CANCELED", "DELIVERED"] },
+    status: {
+      type: String,
+      enum: ["PENDING", "CANCELED", "DELIVERED"],
+      default: "PENDING",
+    },
   },
   {
     timestamps: true,
